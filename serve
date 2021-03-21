@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+// argument
+exec('php -S localhost:8080');

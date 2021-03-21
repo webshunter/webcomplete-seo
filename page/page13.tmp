@@ -1,0 +1,7 @@
+<script> 
+ 
+</script><div id="ir5n"><div class="container"><span id="iloj"><div id="ifew" class="panel panel-primary"><div id="igim" class="panel-body jumbotron"><form action="http://ui.lspbnsp.id/sertifikasi/psertifikasi/10/0" method="GET"><a href="" id="i9mzqv" class="link"></a><table cellpadding="5" cellspacing="20" width="60%" id="ifj6m"><tbody id="iicvg"><tr id="ihhl7"><td width="40%" id="iuiir">Nama Lengkap</td><td id="izd1w"><input type="text" name="users" placeholder="ketik keyword nama" id="id7ly" class="form-control input-sm width-auto"/></td></tr><tr id="iay2u"></tr><tr id="ierej"><td width="40%" id="i0vcn">NIK/No KK</td><td id="iw1yp"><input type="text" name="nis" placeholder="ketik keyword NIK/No KK" id="i5jc6" class="form-control input-sm width-auto"/></td></tr><tr id="iz4ja"><td id="ij0et"></td><td id="i7fle"><button type="submit" name="submit" value="submit" id="iqxrz" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-search"></span> Pencarian</button><a href="http://ui.lspbnsp.id/sertifikasi/psertifikasi/10/0" id="iah34" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-back"></span> Reset</a></td></tr></tbody></table></form></div></div></span><div id="imvap">{{datatable}}</div></div></div><script> 
+ 
+</script><script> 
+ 
+</script>

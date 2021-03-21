@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+// argument
+
+require_once 'gugus_artisan/db_table.php';
+
+foreach(crdb() as $key => $val){
+    exec($val["command"]);
+}
