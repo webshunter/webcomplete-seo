@@ -215,7 +215,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" style="color: #fff;" href="#"><img height="60px" style="margin-top: -20px;"
-            src="<?= base_url('assets/logo.png')?>" alt=""></a>
+            src="<?= base_url('assets/logo.png?v='.date('ymdhis'))?>" alt=""></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -294,7 +294,7 @@
 <footer class="footer-bs">
     <div class="row">
         <div class="col-md-3 footer-brand animated fadeInLeft">
-            <img src="<?= site_url('assets/') ?>logo.png?v=".date('ymdhis') alt="LSP" width="120rem">
+            <img src="<?= site_url('assets/logo.png?v='.date('ymdhis')) ?>" alt="LSP" width="120rem">
             <br>
             <?= json_decode(ffread('assets/setting.json'))->biodata  ?>
         </div>

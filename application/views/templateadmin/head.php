@@ -93,7 +93,7 @@
     <!-- bootstrap JS
 		============================================ -->
     
-
+        <script src="<?= base_url('assets/file.js') ?>"></script>
 
 </head>
 
@@ -245,6 +245,8 @@
                         <li><a  href="<?= site_url('admin/sosmed');?>"><i class="notika-icon notika-form"></i> User Sosmed</a>
                         </li>
                         <li><a  href="<?= site_url('admin/slider');?>"><i class="notika-icon notika-form"></i> Slider</a>
+                        </li>
+                        <li><a  href="<?= site_url('admin/forms');?>"><i class="notika-icon notika-form"></i> Form</a>
                         </li>
                         <li><a  href="<?= site_url('admin/setting');?>"><i class="notika-icon notika-form"></i> Setting</a>
                         </li>
