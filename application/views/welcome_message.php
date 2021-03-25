@@ -262,7 +262,7 @@
         stepsBeforeSave: 1,
         autosave: true,         // Store data automatically
         autoload: true,
-        urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
+        // urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
         urlStore: '<?= site_url() ?>/admin/page/savepages/'+idbuuild,
         // ContentType: 'application/json',
         // For custom parameters/headers on requests
