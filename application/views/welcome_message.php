@@ -188,7 +188,46 @@
     	<div class="panel__basic-actions"></div>
   	</div>
     <div id="gjs" style="height:0px; overflow:hidden">
-      
+      <?php 
+        $id = generate_session('buildid');
+        if (isset($id)) {
+            echo '<style>';
+            if (file_exists('page/pagecss'.$id.'.tmp')) {
+                echo ffread('page/pagecss'.$id.'.tmp');
+            }
+            echo '</style>';
+            if (file_exists('page/page'.$id.'.tmp')) {
+                $html = ffread('page/page'.$id.'.tmp');
+                $html = str_replace('{{slider}}', Form::slider(), $html);
+                // cek apakah tipe_doc ada
+                $cekslider = $this->db->query("SELECT * FROM page WHERE id = '$id' ")->row();
+                $tipe_doc = $cekslider->tipe_doc;
+                // cek 
+                if ($tipe_doc != "") {
+                    
+                    // baca semua artikel yang didapat dengan tipe yang sama
+                    $listd = $this->db->query("SELECT * FROM page WHERE type = '' AND position = '' AND tipe_doc = '$tipe_doc' ")->result();
+
+                    $createlist = "<ul class=\"nav nav-pills nav-stacked\">";
+                    foreach ($listd as $key => $value) {
+                        $createlist .= "<li><a href='".site_url('pages/id/'.$value->slug)."'>$value->judul</a></li>";
+                    }
+                    $createlist .= "</ul>";
+
+                    $html = str_replace('{{artikel}}', $createlist, $html);
+
+
+
+                }
+                echo $html;
+            }
+            echo '<script>';
+                if (file_exists('page/pagejs'.$id.'.tmp')) {
+                    echo ffread('page/pagejs'.$id.'.tmp');
+                }
+                echo '</script>';
+        }
+    ?>
     </div>
 
     <form id="savepages" style="display: none;" action="<?= site_url('admin/page/savepage/'.generate_session('buildid')) ?>" method="post" enctype="multipart/form-data">
