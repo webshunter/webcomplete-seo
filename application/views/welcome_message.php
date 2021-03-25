@@ -258,12 +258,12 @@
           assets: images
         },
         storageManager: {
-          type: null,
-          stepsBeforeSave: 3,
-          // autosave: true,         // Store data automatically
-          // autoload: true,
-          // urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
-          // urlStore: '<?= site_url() ?>/admin/page/savepages/'+idbuuild,
+          type: 'remote',
+          stepsBeforeSave: 1,
+          autosave: true,         // Store data automatically
+          autoload: true,
+          urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
+          urlStore: '<?= site_url() ?>/admin/page/savepages/'+idbuuild,
           // ContentType: 'application/json',
           // For custom parameters/headers on requests
           //params: { _some_token: '....' },
