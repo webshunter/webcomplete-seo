@@ -209,7 +209,7 @@
       ];
 
       var editor  = grapesjs.init({
-        avoidInlineStyle: false,
+        avoidInlineStyle: true,
         height: '100%',
         container : '#gjs',
         fromElement: 1,
@@ -219,33 +219,32 @@
           assets: images
         },
         storageManager: {
-        type: 'remote',
-        stepsBeforeSave: 1,
+          type: 'remote',
+          stepsBeforeSave: 3
         // autosave: true,         // Store data automatically
         // autoload: true,
-        urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
-        urlStore: '<?= site_url() ?>/admin/page/savepages/'+idbuuild,
-        // ContentType: 'application/json',
-        // For custom parameters/headers on requests
-        //params: { _some_token: '....' },
-        contentTypeJson: true,
-        storeComponents: true,
-        storeStyles: true,
-        storeHtml: true,
-        storeCss: true,
-        storeJs: true,
-        headers: {
-        'Content-Type': 'application/json'
+          urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
+          urlStore: '<?= site_url() ?>/admin/page/savepages/'+idbuuild,
+          // ContentType: 'application/json',
+          // For custom parameters/headers on requests
+          //params: { _some_token: '....' },
+          contentTypeJson: true,
+          storeComponents: true,
+          storeStyles: true,
+          storeHtml: true,
+          storeCss: true,
+          storeJs: true,
+          headers: {
+          'Content-Type': 'application/json'
+          },
+          json_encode:{
+          "gjs-html": [],
+          "gjs-css": [],
+          "gjs-js": [],
+          }
+        //headers: { Authorization: 'Basic ...' },
         },
-        json_encode:{
-        "gjs-html": [],
-        "gjs-css": [],
-        "gjs-js": [],
-        }
-      //headers: { Authorization: 'Basic ...' },
-      },
         selectorManager: { componentFirst: true },
-        styleManager: { clearProperties: 1 },
         plugins: [
           'grapesjs-lory-slider',
           'grapesjs-tabs',
