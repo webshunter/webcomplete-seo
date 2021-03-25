@@ -262,7 +262,7 @@
         stepsBeforeSave: 1,
         // autosave: true,         // Store data automatically
         // autoload: true,
-        // urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
+        urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
         urlStore: '<?= site_url() ?>/admin/page/savepages/'+idbuuild,
         // ContentType: 'application/json',
         // For custom parameters/headers on requests
@@ -770,51 +770,51 @@
 
 
       // Store and load events
-      // editor.on('storage:load', function(e) { console.log('Loaded ', e) });
-      // editor.on('storage:store', function(e) { console.log('Stored ', e) });
+      editor.on('storage:load', function(e) { console.log('Loaded ', e) });
+      editor.on('storage:store', function(e) { console.log('Stored ', e) });
 
 
       // Do stuff on load
-      // editor.on('load', function() {
-      //   var $ = grapesjs.$;
+      editor.on('load', function() {
+        var $ = grapesjs.$;
 
-      //   // Show logo with the version
-      //   var logoCont = document.querySelector('.gjs-logo-cont');
-      //   document.querySelector('.gjs-logo-version').innerHTML = 'v' + grapesjs.version;
-      //   var logoPanel = document.querySelector('.gjs-pn-commands');
-      //   logoPanel.appendChild(logoCont);
+        // Show logo with the version
+        var logoCont = document.querySelector('.gjs-logo-cont');
+        document.querySelector('.gjs-logo-version').innerHTML = 'v' + grapesjs.version;
+        var logoPanel = document.querySelector('.gjs-pn-commands');
+        logoPanel.appendChild(logoCont);
 
 
-      //   // Load and show settings and style manager
-      //   var openTmBtn = pn.getButton('views', 'open-tm');
-      //   openTmBtn && openTmBtn.set('active', 1);
-      //   var openSm = pn.getButton('views', 'open-sm');
-      //   openSm && openSm.set('active', 1);
+        // Load and show settings and style manager
+        var openTmBtn = pn.getButton('views', 'open-tm');
+        openTmBtn && openTmBtn.set('active', 1);
+        var openSm = pn.getButton('views', 'open-sm');
+        openSm && openSm.set('active', 1);
 
-      //   // Add Settings Sector
-      //   var traitsSector = $('<div class="gjs-sm-sector no-select">'+
-      //     '<div class="gjs-sm-title"><span class="icon-settings fa fa-cog"></span> Settings</div>' +
-      //     '<div class="gjs-sm-properties" style="display: none;"></div></div>');
-      //   var traitsProps = traitsSector.find('.gjs-sm-properties');
-      //   traitsProps.append($('.gjs-trt-traits'));
-      //   $('.gjs-sm-sectors').before(traitsSector);
-      //   traitsSector.find('.gjs-sm-title').on('click', function(){
-      //     var traitStyle = traitsProps.get(0).style;
-      //     var hidden = traitStyle.display == 'none';
-      //     if (hidden) {
-      //       traitStyle.display = 'block';
-      //     } else {
-      //       traitStyle.display = 'none';
-      //     }
-      //   });
+        // Add Settings Sector
+        var traitsSector = $('<div class="gjs-sm-sector no-select">'+
+          '<div class="gjs-sm-title"><span class="icon-settings fa fa-cog"></span> Settings</div>' +
+          '<div class="gjs-sm-properties" style="display: none;"></div></div>');
+        var traitsProps = traitsSector.find('.gjs-sm-properties');
+        traitsProps.append($('.gjs-trt-traits'));
+        $('.gjs-sm-sectors').before(traitsSector);
+        traitsSector.find('.gjs-sm-title').on('click', function(){
+          var traitStyle = traitsProps.get(0).style;
+          var hidden = traitStyle.display == 'none';
+          if (hidden) {
+            traitStyle.display = 'block';
+          } else {
+            traitStyle.display = 'none';
+          }
+        });
 
-      //   // Open block manager
-      //   var openBlocksBtn = editor.Panels.getButton('views', 'open-blocks');
-      //   openBlocksBtn && openBlocksBtn.set('active', 1);
+        // Open block manager
+        var openBlocksBtn = editor.Panels.getButton('views', 'open-blocks');
+        openBlocksBtn && openBlocksBtn.set('active', 1);
 
-      //   // Move Ad
-      //   $('#gjs').append($('.ad-cont'));
-      // });
+        // Move Ad
+        $('#gjs').append($('.ad-cont'));
+      });
 
 
          editor.BlockManager.add('contentTemp', {
