@@ -220,7 +220,7 @@
         },
         storageManager: {
           type: 'remote',
-          stepsBeforeSave: 3
+          stepsBeforeSave: 3,
         // autosave: true,         // Store data automatically
         // autoload: true,
           urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
@@ -245,6 +245,7 @@
         //headers: { Authorization: 'Basic ...' },
         },
         selectorManager: { componentFirst: true },
+        styleManager: { clearProperties: false },
         plugins: [
           'grapesjs-lory-slider',
           'grapesjs-tabs',
