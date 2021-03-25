@@ -245,7 +245,7 @@
         //headers: { Authorization: 'Basic ...' },
         },
         selectorManager: { componentFirst: true },
-        styleManager: { clearProperties: false },
+        styleManager: { clearProperties: 1 },
         plugins: [
           'grapesjs-lory-slider',
           'grapesjs-tabs',
@@ -731,8 +731,8 @@
 
 
       // Store and load events
-      // editor.on('storage:load', function(e) { console.log('Loaded ', e) });
-      // editor.on('storage:store', function(e) { console.log('Stored ', e) });
+      editor.on('storage:load', function(e) { console.log('Loaded ', e) });
+      editor.on('storage:store', function(e) { console.log('Stored ', e) });
 
 
       // Do stuff on load
