@@ -260,8 +260,8 @@
         storageManager: {
         type: 'remote',
         stepsBeforeSave: 1,
-        // autosave: true,         // Store data automatically
-        // autoload: true,
+        autosave: true,         // Store data automatically
+        autoload: true,
         urlLoad: '<?= site_url() ?>/admin/page/laodpage/'+idbuuild,
         urlStore: '<?= site_url() ?>/admin/page/savepages/'+idbuuild,
         // ContentType: 'application/json',
@@ -770,8 +770,8 @@
 
 
       // Store and load events
-      editor.on('storage:load', function(e) { console.log('Loaded ', e) });
-      editor.on('storage:store', function(e) { console.log('Stored ', e) });
+      // editor.on('storage:load', function(e) { console.log('Loaded ', e) });
+      // editor.on('storage:store', function(e) { console.log('Stored ', e) });
 
 
       // Do stuff on load
