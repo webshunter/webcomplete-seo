@@ -669,6 +669,13 @@
             document.getElementById('html').value = html;
             document.getElementById('css').value = css;
             document.getElementById('js').value = js;
+            const getAllComponents = (model, result = []) => {
+              result.push(model);
+              model.components().each(mod => getAllComponents(mod, result))
+              return result;
+            }
+            const all = getAllComponents(editor.DomComponents.getWrapper());
+            console.log(all);
             // pop --------------------------------------------//
             document.getElementById("savepages").submit();
           }
