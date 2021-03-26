@@ -5,6 +5,7 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="email-statis-inner notika-shadow">
                     <h1 class="m-0 text-dark">Form</h1>
+                    <p>Forms is auto pull on cpanel</p>
                   </div>
               </div>
           </div>
