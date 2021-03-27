@@ -630,12 +630,11 @@
         
       canvas: {
         styles: [
-          'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css',
-		      'https://www.w3schools.com/w3css/4/w3.css',
+          'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css',
         ],
         scripts: [
           '<?= base_url()?>assets/jquery/jquery.min.js',
-          'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js',
+          'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js',
         ]
       }
       });
