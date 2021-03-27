@@ -174,43 +174,16 @@
         .bg-nav {
             background-color: rgba(234, 121, 45, 1) !important;
         }
-
-        .navbar {}
-
-        .navbar-header::before {
-            content: "";
-            position: absolute;
-            display: block;
-            background-color: #fff;
-            top: 0;
-            left: 0;
-            height: 90px;
-            width: 150px;
-            margin-left: -20px;
-            z-index: -1;
-            -ms-transform: skew(-20deg);
-            /* Support untuk IE 9 */
-            -webkit-transform: skew(-20deg);
-            /* support untuk Safari */
-            transform: skew(-20deg);
-            /* default syntax */
-        }
     </style>
 </head>
-<nav class="navbar navbar-default navbar-fixed-top " style="background: <?= json_decode(ffread('assets/setting.json'))->navbarbg  ?>; padding: 20px;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: <?= json_decode(ffread('assets/setting.json'))->navbarbg  ?>; padding: 20px;">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" style="color: #fff;" href="#"><img height="60px" style="margin-top: -20px;"
+        <a class="navbar-brand" href="#"><img height="60px" style="margin-top: -20px;"
             src="<?= base_url('assets/logo.png?v='.date('ymdhis'))?>" alt=""></a>
-        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
